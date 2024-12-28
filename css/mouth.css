@@ -1,0 +1,142 @@
+/* Base da boca */
+.mouth {
+    width: 300px;
+    height: 120px;
+    background-color: #f16f6f; /* Cor suave para a boca */
+    border-radius: 50% 50% 40% 40%; /* Curvatura suave */
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidade */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transição suave para animações */
+}
+
+/* Lábios superiores e inferiores */
+.lip-top,
+.lip-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #f7a1a1; /* Cor mais suave e agradável para os lábios */
+    border-radius: 0%; /* Lábios com curvatura natural */
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombras internas e externas para profundidade */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Lábio superior */
+.lip-top {
+    top: 0;
+    background-color: #f7a1a1; /* Cor suave para o lábio superior */
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+}
+
+/* Lábio inferior */
+.lip-bottom {
+    bottom: 0;
+    background-color: #f7a1a1; /* Cor suave para o lábio inferior */
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1), 0 -2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+}
+
+/* Dentes */
+.teeth-container {
+    position: absolute;
+    top: 35%; /* Posiciona os dentes na parte superior da boca */
+    left: 15%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    gap: 4px; /* Aumenta o espaço entre os dentes */
+}
+
+/* Estilo de cada dente */
+.tooth {
+    width: 22px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas mais suaves */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.3); /* Sombras suaves para profundidade */
+    transition: all 0.3s ease; /* Transição suave para animação de dentes */
+}
+
+/* Dentes superiores */
+.tooth.top-left {
+    transform: rotate(-2deg);
+}
+.tooth.top-center {
+    transform: rotate(0deg);
+}
+.tooth.top-right {
+    transform: rotate(2deg);
+}
+
+.mouth.open {
+    width: 200px;
+    height: 120px;
+    background-color: #f16f6f; /* Cor suave para a boca */
+    border-radius: 50% 50% 40% 40%; /* Curvatura suave */
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil para profundidade */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Transição suave para animações */
+
+    .lip-top,
+    .lip-bottom {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background-color: #f7a1a1; /* Cor mais suave e agradável para os lábios */
+        border-radius: 100%; /* Lábios com curvatura natural */
+        box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombras internas e externas para profundidade */
+        transition: all 0.3s ease; /* Transição suave */
+    }
+}
+
+/* Efeito de sorriso */
+.mouth.smiling {
+    height: 100px; /* Reduz a altura da boca */
+    background-color: #f8b6b6; /* Cor mais suave para o sorriso */
+    border-radius: 50% 50% 40% 40%; /* Curvatura suave */
+    z-index: 4;
+    transform: scale(1.1); /* Leve aumento da boca */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao sorrir */
+}
+
+/* Animação para os dentes */
+@keyframes teeth-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Dentes se movendo no sorriso */
+.mouth.smiling .teeth-container .tooth {
+    animation: teeth-bounce 0.5s ease-in-out infinite;
+}
+
+/* Sorriso mais largo */
+.mouth.smiling.wide-smile {
+    .lip-top,
+    .lip-bottom {
+        width: 100%;
+        height: 40%;
+    }
+    width: 340px;
+    height: 120px;
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Sombras mais fortes ao sorrir */
+    border-radius: 50% 50% 40% 40%; /* Suaviza as bordas do sorriso largo */
+}
+
+/* Efeito de interação com os dentes ao sorrir */
+.mouth.smiling.wide-smile .tooth {
+    animation: teeth-bounce 0.4s ease-in-out infinite; /* Animação mais fluida para os dentes */
+}

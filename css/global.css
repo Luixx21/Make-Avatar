@@ -1,0 +1,25 @@
+/* global.css */
+/* Reset básico e centralização da tela */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d2c54, #1a3b61);
+    transform: scale(100vw);
+    color: white;
+}
+.character {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,53 @@
+/* Estilo da orelha */
+.ear {
+    width: 80px;
+    height: 120px;
+    background-color: #f0d8b4; /* Cor da pele */
+    border-radius: 50% 50% 40% 40%; /* Forma arredondada da orelha */
+    position: relative;
+    z-index: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra externa suave */
+    transform: rotate(-15deg); /* Leve inclinação para dar um efeito mais realista */
+    transition: transform 0.3s ease-in-out; /* Transição suave ao interagir */
+}
+
+/* Detalhes internos da orelha (cartilagem) */
+.ear::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 60px;
+    height: 90px;
+    background-color: #e8b78d; /* Cor mais clara para a cartilagem */
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2); /* Sombra interna */
+}
+
+/* Canal auditivo */
+.ear .canal {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    width: 30px;
+    height: 50px;
+    background-color: #c88f6e; /* Cor mais escura para o canal auditivo */
+    border-radius: 50% 50% 30% 30%;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15); /* Sombra interna */
+}
+
+/* Efeito de hover (interação) */
+.ear:hover {
+    transform: rotate(-10deg) scale(1.05); /* Aumenta o tamanho e ajusta a rotação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao interagir */
+}
+
+/* Orelha direita */
+.ear.right {
+    transform: rotate(15deg); /* Inclinação para a orelha direita */
+}
+
+/* Ajuste do canal auditivo da orelha direita */
+.ear.right .canal {
+    left: 25px; /* Alinha melhor para a orelha direita */
+}

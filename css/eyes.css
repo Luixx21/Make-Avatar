@@ -1,0 +1,126 @@
+/* eyes.css */
+:root {
+    --iris-color-grade: #72a2d1; /* Cor mais clara para a íris */
+    --iris-color: #1e468a; /* Cor mais escura para a íris */ 
+}
+
+/* Estilo do olho */
+.eye-right, .eye-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+.eye {
+    width: 190px;
+    height: 190px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid #333;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    transition: clip-path 0.3s ease;
+    padding: 20px;
+}
+/* Cílios superiores */
+.eye::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 8px,
+        #333 8px,
+        #333 10px
+    );
+    transform: rotate(-5deg);
+    transform-origin: center bottom;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Cílios inferiores */
+.eye::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 8px,
+        #333 8px,
+        #333 10px
+    );
+    transform: rotate(5deg);
+    transform-origin: center top;
+    border-radius: 50%;
+    z-index: 2;
+}
+/* Estilo da íris */
+.iris {
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle at 50% 50%, var(--iris-color-grade) 20%, var(--iris-color) 50%, #0d2c54 80%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da pupila */
+.pupil {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5), 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo das pálpebras */
+.eyelid {
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    height: 50%;
+    background-color: #f0d8b4;
+    z-index: 3;
+    transition: height 0.2s ease-in-out;
+}
+
+/* Pálpebra superior */
+.eyelid.top {
+    top: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+/* Pálpebra inferior */
+.eyelid.bottom {
+    bottom: 0;
+    border-radius: 0 0 50% 50%;
+}
+/* Brilho na pupila */
+.shine {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    opacity: 0.6;
+    z-index: 2;
+    pointer-events: none;
+}

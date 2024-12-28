@@ -1,0 +1,10 @@
+/* Em um arquivo CSS principal */
+@import url("face.css");
+@import url("hair.css");
+@import url("ear.css");
+@import url("eaebrow.css");
+@import url("eyes.css");
+@import url("nose.css");
+@import url("mouth.css");
+@import url("buttons.css");
+@import url("global.css");

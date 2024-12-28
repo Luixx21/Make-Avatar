@@ -1,0 +1,55 @@
+/* nose.css */
+:root {
+    --nose-color: #cc7a4d;
+}
+/* Estilo do nariz */
+.nose {
+    width: 60px;
+    height: 90px;
+    background-color: var(--nose-color); /* Cor do nariz */
+    border-radius: 50% 50% 40% 40%; /* Forma arredondada do nariz */
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px; /* Ajusta a distância entre o nariz e a boca */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15), 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombras mais suaves e com maior difusão */
+    transition: all 0.3s ease; /* Transição suave para efeitos de interação */
+}
+
+/* Efeito de foco para dar mais realismo */
+.nose:hover {
+    transform: scale(1.05); /* Aumenta o nariz ao passar o mouse */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2), 0 15px 30px rgba(0, 0, 0, 0.25); /* Sombra mais intensa ao passar o mouse */
+}
+
+/* Sombras para dar profundidade */
+.nose::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); /* Sombra interna mais pronunciada */
+    transition: all 0.3s ease; /* Transição suave ao interagir */
+}
+
+/* Detalhe da ponta do nariz */
+.nose .tip {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    width: 30px;
+    height: 20px;
+    background-color: #e6a16d; /* Cor mais suave e natural */
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito para a ponta do nariz */
+.nose .tip:hover {
+    transform: scale(1.1); /* Aumenta a ponta do nariz quando o mouse passa */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Aumenta a sombra da ponta */
+}

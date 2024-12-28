@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Make avatar</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <section class="buttons">
+            <label for="hair">
+                <h2>Escolha a cor do cabelo</h2>
+                <input type="color" id="hair">
+            </label>
+            <label for="face">
+                <h2>Escolha a cor da pele</h2>
+                <input type="color" id="face">
+            </label>
+            <label for="iris">
+                <h2>Escolha a cor da íris</h2>
+                <input type="color" id="iris">
+            </label>
+            <label for="mouth">
+                <h2>Escolha a cor da boca</h2>
+                <input type="color" id="mouth">
+            </label>
+        </section>
+        <div class="character">
+            <div class="ear"></div> <!-- Orelha esquerda -->
+            <div class="face-container">
+                <div class="hair-container">
+                    <div class="hair"></div>
+                </div>
+                <div class="eyes-container">
+                    <div class="eye-left">
+                        <div class="eyebrow left"></div> <!-- Sobrancelha esquerda -->
+                        <div class="eye">
+                            <div class="iris">
+                                <div class="pupil">
+                                    <div class="shine"></div>
+                                </div>
+                            </div>
+                            <div class="eyelid top"></div>
+                            <div class="eyelid bottom"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="eye-right">
+                        <div class="eyebrow right"></div> <!-- Sobrancelha direita -->
+                        <div class="eye">
+                            <div class="iris">
+                                <div class="pupil">
+                            <div class="shine"></div>
+                        </div>
+                            </div>
+                            <div class="eyelid top"></div>
+                            <div class="eyelid bottom"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nose"></div>
+                <div class="mouth">
+                    <div class="lip-top"></div>
+                    <div class="lip-bottom"></div>
+                    <div class="teeth-container">
+                        <div class="tooth top-left"></div>
+                        <div class="tooth top-center"></div>
+                        <div class="tooth top-right"></div>
+                        <div class="tooth bottom-left"></div>
+                        <div class="tooth bottom-center"></div>
+                        <div class="tooth bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ear right"></div> <!-- Orelha direita -->
+        </div>
+        <script src="./js/hair.js"></script>
+        <script src="./js/eye.js"></script>
+        <script src="./js/nose.js"></script>
+        <script src="./js/mouth.js"></script>
+        <script src="./js/colorPick.js"></script>
+    </body>
+</html>

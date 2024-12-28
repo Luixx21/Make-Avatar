@@ -1,0 +1,22 @@
+/* face.css */
+/* Contêiner que agrupa a face */
+.face-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Garante que todos os elementos estejam centralizados verticalmente */
+    border: 2px solid #333; /* Contorno mais suave e escuro */
+    border-radius: 20%; /* Bordas arredondadas mais suaves */
+    padding: 20px; /* Mais espaçamento interno */
+    background-color: #f0d8b4; /* Cor de fundo suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da face */
+    z-index: 1;
+}
+
+/* Contêiner que agrupa os olhos */
+.eyes-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-bottom: 20px; /* Espaço entre os olhos e o nariz */
+}

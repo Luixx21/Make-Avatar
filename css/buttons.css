@@ -1,0 +1,30 @@
+/* Estilo geral para os botões de cor */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo para os inputs de cor */
+input[type="color"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar os botões */
+}
+
+/* Efeito de hover nos botões de cor */
+input[type="color"]:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao interagir */
+}
+
+/* Efeito de foco nos botões de cor */
+input[type="color"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.4); /* Cor de destaque ao focar */
+}

@@ -1,0 +1,39 @@
+/* Estilo para as sobrancelhas */
+.eyebrow {
+    width: 120px;
+    height: 20px;
+    background-color: #4b3f32; /* Cor natural de sobrancelha */
+    border-radius: 50% 50% 0 0; /* Arredondamento nas bordas superiores */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+    transform: rotate(10deg); /* Rotação leve para um efeito mais natural */
+    margin-bottom: 10px; /* Distância da testa (pode ajustar conforme necessário) */
+}
+
+/* Sobrancelha esquerda */
+.eyebrow.left {
+    transform: rotate(-10deg); /* Sobrancelha esquerda com rotação negativa */
+}
+
+/* Sobrancelha direita */
+.eyebrow.right {
+    transform: rotate(10deg); /* Sobrancelha direita com rotação positiva */
+}
+
+/* Efeito de preenchimento (simula pêlos) */
+.eyebrow::before {
+    content: '';
+    position: relative;
+    width: 80%;
+    height: 8px;
+    background-color: #3c2a21; /* Cor de cabelo mais escura para o efeito de pêlos */
+    border-radius: 50%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* Sobrancelhas com efeito de interação (hover) */
+.eyebrow:hover {
+    transform: scale(1.1); /* Aumenta a rotação ao passar o mouse */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao interagir */
+}

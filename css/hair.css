@@ -1,0 +1,43 @@
+:root {
+    --hair-color-grade: #4a342e;
+    --hair-color: #2e1f1b
+}
+/* Estilo do contêiner de cabelo */
+.hair-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: -40px; /* Levanta o cabelo acima dos olhos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Coloca o cabelo acima da face */
+}
+
+/* Estilo do cabelo */
+.hair {
+    position: absolute;
+    width: 110%;
+    height: 160px;
+    background: radial-gradient(circle at center, var(--hair-color-grade) 20%, var(--hair-color) 100%);
+    border-radius: 150px 150px 0 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    top: -50px;
+    z-index: 11;
+    overflow: hidden;
+}
+
+/* Franja ou mechas estilizadas */
+.hair::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 140px;
+    background: radial-gradient(circle at center, var(--hair-color-grade) 30%, var(--hair-color) 100%);
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 12;
+}
